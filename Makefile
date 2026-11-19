@@ -32,7 +32,7 @@ dist: build demo
 	rm -rf dist && mkdir -p dist
 	zip -qr dist/apartment-takehome.zip README.md Makefile requirements.txt build.py \
 	    src blender scripts tools tests data video/build_video.py video/blender_orbit.py video/narration.txt \
-	    out out_variant out_variant.input -x '*/__pycache__/*' '*.pyc' '*.DS_Store'
+	    out out_variant out_variant.input -x '*/__pycache__/*' '*.pyc' '*.DS_Store' 'out_variant/top.png' 'out_variant/iso.png'
 	@echo "dist/apartment-takehome.zip"
 
 clean:
