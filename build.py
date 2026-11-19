@@ -114,10 +114,11 @@ def main(argv: Optional[List[str]] = None) -> int:
     publish(tmp, out)
 
     print()
-    print(f"{'Зона':<6}{'Название':<26}{'Пол, м²':>9}{'Периметр, м':>13}{'Стены брутто':>14}{'нетто, м²':>11}")
+    print(f"{'Зона':<6}{'Название':<26}{'Пол, м²':>9}{'Периметр, м':>13}{'Плинтус, м':>12}"
+          f"{'Стены брутто':>14}{'нетто, м²':>11}")
     for zq in q.zones:
         print(f"{zq.zone.id:<6}{zq.zone.name[:25]:<26}{m2(zq.floor_area):>9.2f}{m(zq.perimeter):>13.2f}"
-              f"{m2(zq.wall_gross):>14.2f}{m2(zq.wall_net):>11.2f}")
+              f"{m(zq.plinth):>12.2f}{m2(zq.wall_gross):>14.2f}{m2(zq.wall_net):>11.2f}")
     print(f"Двери: {len(q.doors)}, окна: {len(q.windows)}, проёмы без заполнения: {len(q.doorways)}")
     return 0
 

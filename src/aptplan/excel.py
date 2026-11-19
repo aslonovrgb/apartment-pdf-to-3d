@@ -74,6 +74,11 @@ def write_workbook(plan: Plan, q: Quantities, issues: List[Issue], path: str) ->
         rows = [
             ("Площадь пола", "м²", m2(zq.floor_area), "площадь контура зоны"),
             ("Периметр пола", "м", m(zq.perimeter), "сумма рёбер контура"),
+            ("Длина плинтуса", "м", m(zq.plinth),
+             "грани стен минус проёмы от пола"
+             + (" (" + ", ".join(sorted({d.opening_id for f in zq.faces for d in f.deductions if d.at_floor})) + ")"
+                if any(d.at_floor for f in zq.faces for d in f.deductions) else "")
+             + "; по границам без стен не считается"),
             ("Площадь потолка", "м²", m2(zq.ceiling_area),
              "горизонтальная проекция" + ("; вертикальные грани перепадов не добавлены" if multi else "")),
         ]
@@ -98,6 +103,7 @@ def write_workbook(plan: Plan, q: Quantities, issues: List[Issue], path: str) ->
             return
         _row(ws, ["", label, "", "", "", None, ""], bold=True, fill=TOTAL_FILL)
         data = [("Площадь пола", "м²", sum(m2(z.floor_area) for z in zs)),
+                ("Длина плинтуса", "м", sum(m(z.plinth) for z in zs)),
                 ("Площадь потолка", "м²", sum(m2(z.ceiling_area) for z in zs))]
         if with_walls:
             data += [("Стены брутто", "м²", sum(m2(z.wall_gross) for z in zs)),
@@ -120,8 +126,8 @@ def write_workbook(plan: Plan, q: Quantities, issues: List[Issue], path: str) ->
     # ------------------------------------------------------------------ Стены по граням
     ws = _sheet(wb, "Стены по граням",
                 ["Зона ID", "Ребро контура", "Стена", "Длина, м", "Высота, м", "Брутто, м²", "Проёмы",
-                 "Вычет, м²", "Нетто, м²"],
-                [9, 13, 14, 10, 16, 11, 30, 10, 10])
+                 "Вычет, м²", "Нетто, м²", "Плинтус, м"],
+                [9, 13, 14, 10, 16, 11, 30, 10, 10, 11])
     for zq in q.zones:
         for f in zq.faces:
             ded = "; ".join(f"{d.opening_id} {m(d.width):.2f}×{m(d.height):.2f}" for d in f.deductions) or "—"
@@ -129,11 +135,11 @@ def write_workbook(plan: Plan, q: Quantities, issues: List[Issue], path: str) ->
             height = m(hs[0]) if len(hs) == 1 else " / ".join(f"{m(h):.3f}" for h in hs)
             wall = f"{f.wall_id} (торец)" if f.end_face else f.wall_id
             _row(ws, [f.zone_id, f.edge_index, wall, m(f.length), height, m2(f.gross), ded,
-                      m2(f.openings_area), m2(f.net)], num_cols=[4, 5, 6, 8, 9])
+                      m2(f.openings_area), m2(f.net), m(f.plinth)], num_cols=[4, 5, 6, 8, 9, 10])
         for s in zq.open_spans:
             _row(ws, [s.zone_id, s.edge_index, "—", m(s.length), None, 0,
-                      f"открытая граница{' с ' + s.neighbour if s.neighbour else ''}: не стена", 0, 0],
-                 num_cols=[4, 6, 8, 9])
+                      f"открытая граница{' с ' + s.neighbour if s.neighbour else ''}: не стена", 0, 0, 0],
+                 num_cols=[4, 6, 8, 9, 10])
 
     # ------------------------------------------------------------------ Проёмы
     ws = _sheet(wb, "Проёмы",
@@ -232,6 +238,8 @@ def write_workbook(plan: Plan, q: Quantities, issues: List[Issue], path: str) ->
         "Границы зон без перегородки — не стены", "правило расчёта")
     add("Проём вычитается из каждой отделываемой грани, которую он пересекает; двери и окна считаются по уникальным ID",
         "правило расчёта")
+    add("Длина плинтуса = отделываемые грани стен на уровне пола минус проёмы, начинающиеся от пола (двери, проёмы "
+        "без заполнения, витраж в пол); по открытым границам зон плинтуса нет", "правило расчёта")
     add(f"Сверка площадей: «совпадает» ≤ {plan.tol('area_ok_pct'):.0f}%, «проверить» ≤ {plan.tol('area_check_pct'):.0f}%, "
         "иначе «расхождение»", "правило сверки")
     add(f"Контрольные размеры отмечаются при отклонении > {plan.tol('control_dimension_mm'):.0f} мм — порог сверки пилота, "

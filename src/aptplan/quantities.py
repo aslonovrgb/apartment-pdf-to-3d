@@ -11,7 +11,9 @@ Rules (FR05):
 * face gross = sum over the face of length x local ceiling height (zone height or
   the ceiling region the face runs under, capped by the wall height);
 * every opening is deducted from every finished face it pierces (a door between
-  two rooms reduces both faces); doors/windows are counted once by unique ID.
+  two rooms reduces both faces); doors/windows are counted once by unique ID;
+* skirting (plinth) = finished wall faces at floor level minus openings that start
+  at the floor (doors, doorways, floor-to-ceiling glazing); none along open boundaries.
 
 All internal values are millimetres / mm^2.
 """
@@ -27,6 +29,7 @@ from .model import Opening, Plan, Wall, Zone
 
 PARALLEL_SIN = 0.01  # ~0.57 degrees
 INSIDE_PROBE_MM = 10.0  # how far inside the zone the ceiling height of a face is sampled
+FLOOR_OPENING_MM = 50.0  # an opening with its bottom at or below this interrupts the skirting
 
 
 @dataclass
@@ -35,6 +38,7 @@ class Deduction:
     opening_type: str
     width: float
     height: float
+    at_floor: bool = False  # the opening starts at the floor and interrupts the skirting
 
     @property
     def area(self) -> float:
@@ -78,6 +82,11 @@ class Face:
         return self.gross - self.openings_area
 
     @property
+    def plinth(self) -> float:
+        """Skirting along this face: its length minus openings that start at the floor."""
+        return max(0.0, self.length - sum(d.width for d in self.deductions if d.at_floor))
+
+    @property
     def key(self) -> str:
         return f"{self.zone_id}/e{self.edge_index}/{self.wall_id}"
 
@@ -119,6 +128,10 @@ class ZoneQuantities:
     @property
     def wall_net(self) -> float:
         return self.wall_gross - self.openings_area
+
+    @property
+    def plinth(self) -> float:
+        return sum(f.plinth for f in self.faces)
 
 
 @dataclass
@@ -313,7 +326,8 @@ def compute(plan: Plan) -> Quantities:
                                 width += ov
                                 area += ov * vert
                         if width > 0.5:
-                            face.deductions.append(Deduction(o.id, o.type, width, area / width))
+                            face.deductions.append(Deduction(o.id, o.type, width, area / width,
+                                                             at_floor=o.sill <= FLOOR_OPENING_MM))
                             opening_faces[o.id].append(face.key)
                     faces.append(face)
                 covered = g.interval_union(covered + [cover])

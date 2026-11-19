@@ -99,6 +99,7 @@ def summary(plan: Plan, q: Quantities) -> Dict[str, Any]:
             "kind": zq.zone.kind,
             "floor_m2": r2(m2(zq.floor_area)),
             "perimeter_m": r2(m(zq.perimeter)),
+            "plinth_m": r2(m(zq.plinth)),
             "ceiling_m2": r2(m2(zq.ceiling_area)),
             "ceiling_height_m": r2(m(zq.zone.height)),
             "ceiling_by_height": [{"height_m": round(m(h), 3), "area_m2": r2(m2(a)), "label": lbl}
@@ -110,7 +111,8 @@ def summary(plan: Plan, q: Quantities) -> Dict[str, Any]:
                 "key": f.key, "length_m": r2(m(f.length)), "height_m": r2(m(f.height)),
                 "heights_m": [round(m(h), 3) for h in f.heights], "end_face": f.end_face,
                 "gross_m2": r2(m2(f.gross)), "openings_m2": r2(m2(f.openings_area)),
-                "net_m2": r2(m2(f.net)), "openings": [d.opening_id for d in f.deductions],
+                "net_m2": r2(m2(f.net)), "plinth_m": r2(m(f.plinth)),
+                "openings": [d.opening_id for d in f.deductions],
             } for f in zq.faces],
         })
 
@@ -122,6 +124,7 @@ def summary(plan: Plan, q: Quantities) -> Dict[str, Any]:
         "zones": zones,
         "interior_total": {
             "floor_m2": total(q.interior, "floor_area"),
+            "plinth_m": r2(sum(m(z.plinth) for z in q.interior)),
             "ceiling_m2": total(q.interior, "ceiling_area"),
             "walls_gross_m2": total(q.interior, "wall_gross"),
             "openings_m2": total(q.interior, "openings_area"),

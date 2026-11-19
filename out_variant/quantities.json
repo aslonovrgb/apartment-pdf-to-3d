@@ -7,6 +7,7 @@
       "kind": "interior",
       "floor_m2": 3.4,
       "perimeter_m": 7.41,
+      "plinth_m": 3.79,
       "ceiling_m2": 3.4,
       "ceiling_height_m": 2.47,
       "ceiling_by_height": [
@@ -31,6 +32,7 @@
           "gross_m2": 4.58,
           "openings_m2": 2.29,
           "net_m2": 2.29,
+          "plinth_m": 0.76,
           "openings": [
             "D01"
           ]
@@ -46,6 +48,7 @@
           "gross_m2": 0.21,
           "openings_m2": 0.0,
           "net_m2": 0.21,
+          "plinth_m": 0.09,
           "openings": []
         },
         {
@@ -59,6 +62,7 @@
           "gross_m2": 4.13,
           "openings_m2": 0.0,
           "net_m2": 4.13,
+          "plinth_m": 1.67,
           "openings": []
         },
         {
@@ -72,6 +76,7 @@
           "gross_m2": 0.62,
           "openings_m2": 0.0,
           "net_m2": 0.62,
+          "plinth_m": 0.25,
           "openings": []
         },
         {
@@ -85,6 +90,7 @@
           "gross_m2": 0.23,
           "openings_m2": 0.0,
           "net_m2": 0.23,
+          "plinth_m": 0.1,
           "openings": []
         },
         {
@@ -98,6 +104,7 @@
           "gross_m2": 4.12,
           "openings_m2": 1.76,
           "net_m2": 2.36,
+          "plinth_m": 0.83,
           "openings": [
             "D02"
           ]
@@ -113,6 +120,7 @@
           "gross_m2": 0.25,
           "openings_m2": 0.0,
           "net_m2": 0.25,
+          "plinth_m": 0.1,
           "openings": []
         }
       ]
@@ -123,6 +131,7 @@
       "kind": "interior",
       "floor_m2": 52.07,
       "perimeter_m": 32.66,
+      "plinth_m": 22.36,
       "ceiling_m2": 52.07,
       "ceiling_height_m": 2.89,
       "ceiling_by_height": [
@@ -157,6 +166,7 @@
           "gross_m2": 9.36,
           "openings_m2": 0.0,
           "net_m2": 9.36,
+          "plinth_m": 3.79,
           "openings": []
         },
         {
@@ -170,6 +180,7 @@
           "gross_m2": 1.51,
           "openings_m2": 0.0,
           "net_m2": 1.51,
+          "plinth_m": 0.61,
           "openings": []
         },
         {
@@ -183,6 +194,7 @@
           "gross_m2": 0.38,
           "openings_m2": 0.0,
           "net_m2": 0.38,
+          "plinth_m": 0.15,
           "openings": []
         },
         {
@@ -196,6 +208,7 @@
           "gross_m2": 0.25,
           "openings_m2": 0.0,
           "net_m2": 0.25,
+          "plinth_m": 0.1,
           "openings": []
         },
         {
@@ -209,6 +222,7 @@
           "gross_m2": 0.74,
           "openings_m2": 0.0,
           "net_m2": 0.74,
+          "plinth_m": 0.3,
           "openings": []
         },
         {
@@ -222,6 +236,7 @@
           "gross_m2": 1.4,
           "openings_m2": 0.0,
           "net_m2": 1.4,
+          "plinth_m": 0.57,
           "openings": []
         },
         {
@@ -235,6 +250,7 @@
           "gross_m2": 0.25,
           "openings_m2": 0.0,
           "net_m2": 0.25,
+          "plinth_m": 0.1,
           "openings": []
         },
         {
@@ -248,6 +264,7 @@
           "gross_m2": 3.53,
           "openings_m2": 0.0,
           "net_m2": 3.53,
+          "plinth_m": 1.43,
           "openings": []
         },
         {
@@ -261,6 +278,7 @@
           "gross_m2": 1.65,
           "openings_m2": 0.0,
           "net_m2": 1.65,
+          "plinth_m": 0.67,
           "openings": []
         },
         {
@@ -274,6 +292,7 @@
           "gross_m2": 0.25,
           "openings_m2": 0.0,
           "net_m2": 0.25,
+          "plinth_m": 0.1,
           "openings": []
         },
         {
@@ -287,6 +306,7 @@
           "gross_m2": 5.24,
           "openings_m2": 0.0,
           "net_m2": 5.24,
+          "plinth_m": 2.12,
           "openings": []
         },
         {
@@ -300,6 +320,7 @@
           "gross_m2": 0.62,
           "openings_m2": 0.0,
           "net_m2": 0.62,
+          "plinth_m": 0.25,
           "openings": []
         },
         {
@@ -314,6 +335,7 @@
           "gross_m2": 6.25,
           "openings_m2": 2.16,
           "net_m2": 4.09,
+          "plinth_m": 1.31,
           "openings": [
             "D03"
           ]
@@ -330,6 +352,7 @@
           "gross_m2": 8.07,
           "openings_m2": 0.0,
           "net_m2": 8.07,
+          "plinth_m": 2.78,
           "openings": []
         },
         {
@@ -343,6 +366,7 @@
           "gross_m2": 24.47,
           "openings_m2": 21.98,
           "net_m2": 2.5,
+          "plinth_m": 0.47,
           "openings": [
             "O01",
             "O02",
@@ -363,6 +387,7 @@
           "gross_m2": 5.61,
           "openings_m2": 0.0,
           "net_m2": 5.61,
+          "plinth_m": 1.93,
           "openings": []
         },
         {
@@ -376,6 +401,7 @@
           "gross_m2": 0.14,
           "openings_m2": 0.0,
           "net_m2": 0.14,
+          "plinth_m": 0.05,
           "openings": []
         },
         {
@@ -390,6 +416,7 @@
           "gross_m2": 14.74,
           "openings_m2": 0.0,
           "net_m2": 14.74,
+          "plinth_m": 5.63,
           "openings": []
         }
       ]
@@ -400,6 +427,7 @@
       "kind": "interior",
       "floor_m2": 20.77,
       "perimeter_m": 23.16,
+      "plinth_m": 19.02,
       "ceiling_m2": 20.77,
       "ceiling_height_m": 2.89,
       "ceiling_by_height": [
@@ -434,6 +462,7 @@
           "gross_m2": 2.52,
           "openings_m2": 0.0,
           "net_m2": 2.52,
+          "plinth_m": 1.02,
           "openings": []
         },
         {
@@ -447,6 +476,7 @@
           "gross_m2": 0.26,
           "openings_m2": 0.0,
           "net_m2": 0.26,
+          "plinth_m": 0.1,
           "openings": []
         },
         {
@@ -460,6 +490,7 @@
           "gross_m2": 5.44,
           "openings_m2": 1.95,
           "net_m2": 3.49,
+          "plinth_m": 1.27,
           "openings": [
             "D04"
           ]
@@ -475,6 +506,7 @@
           "gross_m2": 1.52,
           "openings_m2": 0.0,
           "net_m2": 1.52,
+          "plinth_m": 0.62,
           "openings": []
         },
         {
@@ -488,6 +520,7 @@
           "gross_m2": 0.37,
           "openings_m2": 0.0,
           "net_m2": 0.37,
+          "plinth_m": 0.15,
           "openings": []
         },
         {
@@ -501,6 +534,7 @@
           "gross_m2": 1.52,
           "openings_m2": 0.0,
           "net_m2": 1.52,
+          "plinth_m": 0.62,
           "openings": []
         },
         {
@@ -514,6 +548,7 @@
           "gross_m2": 6.91,
           "openings_m2": 0.0,
           "net_m2": 6.91,
+          "plinth_m": 2.8,
           "openings": []
         },
         {
@@ -529,6 +564,7 @@
           "gross_m2": 13.23,
           "openings_m2": 0.0,
           "net_m2": 13.23,
+          "plinth_m": 4.69,
           "openings": []
         },
         {
@@ -542,6 +578,7 @@
           "gross_m2": 11.61,
           "openings_m2": 6.61,
           "net_m2": 5.0,
+          "plinth_m": 1.65,
           "openings": [
             "O05"
           ]
@@ -558,6 +595,7 @@
           "gross_m2": 8.07,
           "openings_m2": 0.0,
           "net_m2": 8.07,
+          "plinth_m": 2.78,
           "openings": []
         },
         {
@@ -571,6 +609,7 @@
           "gross_m2": 0.72,
           "openings_m2": 0.0,
           "net_m2": 0.72,
+          "plinth_m": 0.25,
           "openings": []
         },
         {
@@ -585,6 +624,7 @@
           "gross_m2": 10.61,
           "openings_m2": 2.16,
           "net_m2": 8.45,
+          "plinth_m": 3.08,
           "openings": [
             "D03"
           ]
@@ -597,6 +637,7 @@
       "kind": "interior",
       "floor_m2": 2.09,
       "perimeter_m": 5.85,
+      "plinth_m": 5.01,
       "ceiling_m2": 2.09,
       "ceiling_height_m": 2.38,
       "ceiling_by_height": [
@@ -621,6 +662,7 @@
           "gross_m2": 2.94,
           "openings_m2": 0.0,
           "net_m2": 2.94,
+          "plinth_m": 1.24,
           "openings": []
         },
         {
@@ -634,6 +676,7 @@
           "gross_m2": 0.05,
           "openings_m2": 0.0,
           "net_m2": 0.05,
+          "plinth_m": 0.02,
           "openings": []
         },
         {
@@ -647,6 +690,7 @@
           "gross_m2": 3.96,
           "openings_m2": 1.76,
           "net_m2": 2.2,
+          "plinth_m": 0.83,
           "openings": [
             "D02"
           ]
@@ -662,6 +706,7 @@
           "gross_m2": 2.94,
           "openings_m2": 0.0,
           "net_m2": 2.94,
+          "plinth_m": 1.24,
           "openings": []
         },
         {
@@ -675,6 +720,7 @@
           "gross_m2": 4.01,
           "openings_m2": 0.0,
           "net_m2": 4.01,
+          "plinth_m": 1.69,
           "openings": []
         }
       ]
@@ -685,6 +731,7 @@
       "kind": "interior",
       "floor_m2": 6.67,
       "perimeter_m": 11.49,
+      "plinth_m": 10.56,
       "ceiling_m2": 6.67,
       "ceiling_height_m": 2.4,
       "ceiling_by_height": [
@@ -709,6 +756,7 @@
           "gross_m2": 3.66,
           "openings_m2": 0.0,
           "net_m2": 3.66,
+          "plinth_m": 1.53,
           "openings": []
         },
         {
@@ -722,6 +770,7 @@
           "gross_m2": 0.7,
           "openings_m2": 0.0,
           "net_m2": 0.7,
+          "plinth_m": 0.29,
           "openings": []
         },
         {
@@ -735,6 +784,7 @@
           "gross_m2": 1.88,
           "openings_m2": 0.0,
           "net_m2": 1.88,
+          "plinth_m": 0.79,
           "openings": []
         },
         {
@@ -748,6 +798,7 @@
           "gross_m2": 0.3,
           "openings_m2": 0.0,
           "net_m2": 0.3,
+          "plinth_m": 0.12,
           "openings": []
         },
         {
@@ -761,6 +812,7 @@
           "gross_m2": 3.76,
           "openings_m2": 0.0,
           "net_m2": 3.76,
+          "plinth_m": 1.57,
           "openings": []
         },
         {
@@ -774,6 +826,7 @@
           "gross_m2": 0.24,
           "openings_m2": 0.0,
           "net_m2": 0.24,
+          "plinth_m": 0.1,
           "openings": []
         },
         {
@@ -787,6 +840,7 @@
           "gross_m2": 0.73,
           "openings_m2": 0.0,
           "net_m2": 0.73,
+          "plinth_m": 0.3,
           "openings": []
         },
         {
@@ -800,6 +854,7 @@
           "gross_m2": 0.44,
           "openings_m2": 0.0,
           "net_m2": 0.44,
+          "plinth_m": 0.18,
           "openings": []
         },
         {
@@ -813,6 +868,7 @@
           "gross_m2": 2.79,
           "openings_m2": 0.0,
           "net_m2": 2.79,
+          "plinth_m": 1.17,
           "openings": []
         },
         {
@@ -826,6 +882,7 @@
           "gross_m2": 6.52,
           "openings_m2": 0.0,
           "net_m2": 6.52,
+          "plinth_m": 2.72,
           "openings": []
         },
         {
@@ -839,6 +896,7 @@
           "gross_m2": 6.52,
           "openings_m2": 1.95,
           "net_m2": 4.57,
+          "plinth_m": 1.79,
           "openings": [
             "D04"
           ]
@@ -851,6 +909,7 @@
       "kind": "balcony",
       "floor_m2": 9.52,
       "perimeter_m": 13.82,
+      "plinth_m": 0.14,
       "ceiling_m2": 9.52,
       "ceiling_height_m": 3.04,
       "ceiling_by_height": [
@@ -875,6 +934,7 @@
           "gross_m2": 15.22,
           "openings_m2": 13.74,
           "net_m2": 1.48,
+          "plinth_m": 0.14,
           "openings": [
             "O02",
             "D05",
@@ -886,6 +946,7 @@
   ],
   "interior_total": {
     "floor_m2": 85.0,
+    "plinth_m": 60.75,
     "ceiling_m2": 85.0,
     "walls_gross_m2": 202.85,
     "openings_m2": 42.64,

@@ -110,3 +110,29 @@ def test_real_plan_door_between_rooms_hits_both_faces(real):
     _, _, q = real
     assert sorted(q.opening_faces["D03"]) == ["Z2/e10/W21", "Z3/e9/W21"]
     assert sorted(q.opening_faces["D02"]) == ["Z1/e5/W18", "Z4/e1/W18"]
+
+
+# --------------------------------------------------------------------------- skirting
+
+def test_plinth_reference_room(room_raw):
+    # 14 m of walls minus the 0.9 m door that starts at the floor
+    _, q = build(room_raw)
+    assert m(q.by_zone("Z1").plinth) == pytest.approx(13.10)
+
+
+def test_plinth_door_between_rooms_hits_both_and_window_does_not(two_rooms_raw):
+    _, q = build(two_rooms_raw)
+    for zid in ("A", "B"):
+        z = q.by_zone(zid)
+        assert not z.open_spans
+        # the 0.8 m door is cut from both rooms; the window (sill 900) does not interrupt the skirting
+        assert m(z.plinth) == pytest.approx(m(z.perimeter) - 0.8)
+
+
+def test_real_plan_plinth(real):
+    _, _, q = real
+    assert m(q.by_zone("Z4").plinth) == pytest.approx(5.85 - 0.84, abs=0.01)
+    hall = q.by_zone("Z1")
+    open_len = sum(s.length for s in hall.open_spans)
+    # no skirting along the open boundary with Z2 nor in the entrance and WC doors
+    assert m(hall.plinth) == pytest.approx(m(hall.perimeter - open_len) - 1.09 - 0.84, abs=0.01)
