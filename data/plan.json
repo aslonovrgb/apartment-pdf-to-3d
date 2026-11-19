@@ -1,0 +1,250 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "name": "Квартира — обмерный план (projectfortest.pdf, лист 02)",
+    "note": "Разметка вручную по векторному PDF. Номера зон Z1–Z6 = номера в кружках на плане; названия — по планировке, не из экспликации."
+  },
+  "source": {
+    "file": "source/projectfortest.pdf",
+    "page": 1,
+    "units": "mm",
+    "sha256": "1b10e1e917d616a28d96dfb28d1cf0bf549af3ad6742d0caf0a2093e095b6ad5",
+    "scale": {
+      "pt_per_m": 56.6929,
+      "basis": "1:50 на листе A3 (72/25,4 × 1000/50 = 56,6929 pt/м); проверено по концам размерных линий 5009, 7933, 8103 (по горизонтали) и 1900 (по вертикали) — отклонение < 0,01 %",
+      "calibration": [
+        {"label": "5009 (балкон)", "mm": 5009, "pt_a": [263.812, 105.121], "pt_b": [547.788, 105.121]},
+        {"label": "7933 (витраж)", "mm": 7933, "pt_a": [171.913, 228.821], "pt_b": [621.658, 228.821]},
+        {"label": "8103 (зона 2)", "mm": 8103, "pt_a": [169.078, 366.991], "pt_b": [628.462, 366.991]},
+        {"label": "1900 (балкон)", "mm": 1900, "pt_a": [536.489, 88.441], "pt_b": [536.489, 196.158]}
+      ]
+    },
+    "origin": {
+      "pdf_pt": [169.078, 639.4943],
+      "description": "x = 0 — внутренняя грань левой наружной стены, y = 0 — внутренняя грань нижней наружной стены (левый нижний угол зоны 2); X вправо, Y вверх (вверх по листу)"
+    }
+  },
+  "defaults": {
+    "ceiling_height_mm": 2700,
+    "ceiling_height_source": "assumption",
+    "wall_height_mm": 3039
+  },
+  "tolerances": {},
+  "reference_totals": {
+    "plan_labels_total_m2": 94.82,
+    "schedule_total_m2": 93.56
+  },
+
+  "zones": [
+    {
+      "id": "Z1", "name": "Прихожая", "kind": "interior", "source": "scaled",
+      "polygon": [[6164, 670], [8103, 670], [8103, 2342], [7853, 2342], [7853, 2437], [6164, 2437]],
+      "ceiling_height_mm": 2471, "height_source": "assumption",
+      "reference": {"plan_label": "1", "plan_area_m2": 3.40, "schedule_row": null, "schedule_area_m2": null},
+      "note": "Своей отметки H нет; принята H2471: зона целиком ниже линии свеса ГКЛ (y = 3694), как участки H2471 в зонах 2 и 3. Граница с зоной 2 по y = 2437 — без перегородки. Строка 1 экспликации «Прихожая 9,87» по площади не соответствует зоне (экспликация от другой планировки)."
+    },
+    {
+      "id": "Z2", "name": "Общая зона (кухня-гостиная)", "kind": "interior", "source": "scaled",
+      "polygon": [[0, 0], [3789, 0], [3789, 610], [4044, 610], [4044, 910], [4712, 910], [4712, 2337],
+                  [4044, 2337], [4044, 2437], [6164, 2437], [8103, 2437], [8103, 7560], [50, 7560], [50, 5633], [0, 5633]],
+      "ceiling_height_mm": 2894, "height_source": "pdf_dimension",
+      "ceiling_regions": [
+        {"polygon": [[-1000, -1000], [9000, -1000], [9000, 3694], [-1000, 3694]], "height_mm": 2471,
+         "source": "pdf_dimension", "label": "H2471 — ниже линии свеса ГКЛ y = 3694"},
+        {"polygon": [[-1000, 7360], [9000, 7360], [9000, 9000], [-1000, 9000]], "height_mm": 3039,
+         "source": "pdf_dimension", "label": "H3039 — у витража, выше линии свеса ГКЛ y = 7360"}
+      ],
+      "reference": {"plan_label": "2", "plan_area_m2": 52.07, "schedule_row": null, "schedule_area_m2": null},
+      "note": "Строка 2 экспликации — «Санузел 2,09» (= зона Z4), а не 52,07: нумерация экспликации не совпадает с планом. Перегородки, которые предполагает экспликация (кухня-гостиная 35,45, спальня №2 17,50, прихожая 9,87), на обмерном плане отсутствуют и в модель не добавлены."
+    },
+    {
+      "id": "Z3", "name": "Комната со встроенным шкафом", "kind": "interior", "source": "scaled",
+      "polygon": [[8238, 670], [9363, 670], [9363, 3490], [9513, 3490], [9513, 2873], [12309, 2873],
+                  [12309, 7560], [8488, 7560], [8488, 4780], [8238, 4780]],
+      "ceiling_height_mm": 2891, "height_source": "pdf_dimension",
+      "ceiling_regions": [
+        {"polygon": [[7000, -1000], [13000, -1000], [13000, 3694], [7000, 3694]], "height_mm": 2471,
+         "source": "pdf_dimension", "label": "H2471 — коридор и шкаф, ниже линии свеса ГКЛ y = 3694"},
+        {"polygon": [[7000, 7360], [13000, 7360], [13000, 9000], [7000, 9000]], "height_mm": 3039,
+         "source": "pdf_dimension", "label": "H3039 — у окна, выше линии свеса ГКЛ y = 7360"}
+      ],
+      "reference": {"plan_label": "3", "plan_area_m2": 20.72, "schedule_row": null, "schedule_area_m2": null},
+      "note": "Включает коридор шириной 1125 к ванной и нишу встроенного шкафа (до перегородки y = 2873). В экспликации нет строки с такой площадью (спальни 12,42 и 17,50)."
+    },
+    {
+      "id": "Z4", "name": "Санузел", "kind": "interior", "source": "pdf_dimension",
+      "polygon": [[4812, 649], [6049, 649], [6049, 2337], [4812, 2337]],
+      "ceiling_height_mm": 2376, "height_source": "pdf_dimension",
+      "reference": {"plan_label": "4", "plan_area_m2": 2.09, "schedule_row": "2 — Санузел", "schedule_area_m2": 2.09},
+      "note": "Размеры 1237 × 1688 по чертежу."
+    },
+    {
+      "id": "Z5", "name": "Ванная", "kind": "interior", "source": "scaled",
+      "polygon": [[9478, 53], [11005, 53], [11005, 343], [11915, 343], [11915, 1913], [12015, 1913], [12015, 1608],
+                  [12199, 1608], [12199, 2773], [9478, 2773]],
+      "ceiling_height_mm": 2397, "height_source": "pdf_dimension",
+      "reference": {"plan_label": "5", "plan_area_m2": 6.80, "schedule_row": "3 — Ванная", "schedule_area_m2": 6.73},
+      "note": "Короб с ревизионным люком (x 11915–12309, y 343–1608) и ниша под ним в зону не входят. Размеры 2710 и 280 на чертеже на 10 мм меньше нарисованных стен (2720 и 290)."
+    },
+    {
+      "id": "Z6", "name": "Балкон", "kind": "balcony", "source": "pdf_dimension",
+      "polygon": [[1671, 7820], [6680, 7820], [6680, 9720], [1671, 9720]],
+      "ceiling_height_mm": 3039, "height_source": "assumption",
+      "reference": {"plan_label": "6", "plan_area_m2": 9.74, "schedule_row": "7 — Балкон", "schedule_area_m2": 9.50},
+      "note": "Контур по размерам 5009 × 1900 (до оси рамы остекления). Подпись 9,74 = внешний контур рамы 5059 × 1925; экспликация 9,50 ≈ 5,009 × 1,9."
+    }
+  ],
+
+  "walls": [
+    {"id": "W01", "start": [-192.5, -100], "end": [-192.5, 5633], "thickness_mm": 385, "kind": "exterior", "source": "scaled"},
+    {"id": "W02", "start": [-167.5, 5633], "end": [-167.5, 7690], "thickness_mm": 435, "kind": "exterior", "source": "scaled"},
+    {"id": "W03", "start": [-167.5, 7690], "end": [12424, 7690], "thickness_mm": 260, "kind": "exterior", "source": "scaled"},
+    {"id": "W04", "start": [12424, 7690], "end": [12424, -73.5], "thickness_mm": 230, "kind": "exterior", "source": "scaled"},
+    {"id": "W05", "start": [12424, -73.5], "end": [9363, -73.5], "thickness_mm": 253, "kind": "exterior", "source": "scaled"},
+    {"id": "W06", "start": [-192.5, -100], "end": [6149, -100], "thickness_mm": 200, "kind": "exterior", "source": "scaled"},
+    {"id": "W07", "start": [6149, -100], "end": [6149, 570], "thickness_mm": 200, "kind": "exterior", "source": "scaled"},
+    {"id": "W08", "start": [6149, 570], "end": [8218, 570], "thickness_mm": 200, "kind": "exterior", "source": "scaled"},
+    {"id": "W09", "start": [8280.5, -137.5], "end": [8280.5, 607.5], "thickness_mm": 125, "kind": "interior", "source": "scaled"},
+    {"id": "W10", "start": [8280.5, -137.5], "end": [9363, -137.5], "thickness_mm": 125, "kind": "exterior", "source": "scaled"},
+    {"id": "W11", "start": [8280.5, 607.5], "end": [9420.5, 607.5], "thickness_mm": 125, "kind": "interior", "source": "scaled"},
+    {"id": "W12", "start": [3839, -100], "end": [3839, 560], "thickness_mm": 100, "kind": "interior", "source": "scaled"},
+    {"id": "W13", "start": [3839, 560], "end": [4094, 560], "thickness_mm": 100, "kind": "interior", "source": "scaled"},
+    {"id": "W14", "start": [4094, 560], "end": [4094, 860], "thickness_mm": 100, "kind": "interior", "source": "scaled"},
+    {"id": "W15", "start": [4094, 860], "end": [4762, 860], "thickness_mm": 100, "kind": "interior", "source": "scaled"},
+    {"id": "W16", "start": [4762, -100], "end": [4762, 2387], "thickness_mm": 100, "kind": "interior", "source": "scaled"},
+    {"id": "W17", "start": [4044, 2387], "end": [6106.5, 2387], "thickness_mm": 100, "kind": "partition", "source": "pdf_dimension"},
+    {"id": "W18", "start": [6106.5, 670], "end": [6106.5, 2387], "thickness_mm": 115, "kind": "partition", "source": "scaled"},
+    {"id": "W19", "start": [4762, 599], "end": [6049, 599], "thickness_mm": 100, "kind": "partition", "source": "scaled"},
+    {"id": "W20", "start": [7853, 2389.5], "end": [8170.5, 2389.5], "thickness_mm": 95, "kind": "partition", "source": "pdf_dimension"},
+    {"id": "W21", "start": [8170.5, 670], "end": [8170.5, 4780], "thickness_mm": 135, "kind": "partition", "source": "scaled"},
+    {"id": "W22", "start": [8295.5, 4780], "end": [8295.5, 7690], "thickness_mm": 385, "kind": "interior", "source": "scaled"},
+    {"id": "W23", "start": [9420.5, -73.5], "end": [9420.5, 2873], "thickness_mm": 115, "kind": "interior", "source": "scaled"},
+    {"id": "W24", "start": [9420.5, 2823], "end": [12424, 2823], "thickness_mm": 100, "kind": "partition", "source": "scaled"},
+    {"id": "W25", "start": [9438, 2873], "end": [9438, 3490], "thickness_mm": 150, "kind": "partition", "source": "scaled"},
+    {"id": "W26", "start": [11965, 343], "end": [11965, 1913], "thickness_mm": 100, "kind": "partition", "source": "pdf_dimension"},
+    {"id": "W27", "start": [11965, 1139], "end": [12424, 1139], "thickness_mm": 100, "kind": "partition", "source": "scaled"},
+    {"id": "W28", "start": [11067.5, -73.5], "end": [11067.5, 280.5], "thickness_mm": 125, "kind": "interior", "source": "scaled"},
+    {"id": "W29", "start": [11067.5, 280.5], "end": [12424, 280.5], "thickness_mm": 125, "kind": "interior", "source": "scaled"},
+    {"id": "W30", "start": [11965, 1558], "end": [12424, 1558], "thickness_mm": 100, "kind": "partition", "source": "scaled"},
+    {"id": "W31", "start": [12254, 1608], "end": [12254, 2773], "thickness_mm": 110, "kind": "partition", "source": "scaled"}
+  ],
+
+  "openings": [
+    {"id": "D01", "type": "door", "wall": "W08", "offset_mm": 624, "width_mm": 1090, "sill_mm": 0, "head_mm": 2100,
+     "hinge": "end", "swing": "left", "source": "scaled",
+     "note": "Входная дверь; ширина — разрыв стены на чертеже (размера нет); высота — допущение"},
+    {"id": "D02", "type": "door", "wall": "W18", "offset_mm": 641, "width_mm": 840, "sill_mm": 0, "head_mm": 2100,
+     "hinge": "end", "swing": "left", "source": "pdf_dimension",
+     "note": "Санузел: проём 840 со стороны санузла (662 + 840 + 186), 830 со стороны прихожей; принято 840"},
+    {"id": "D03", "type": "door", "wall": "W21", "offset_mm": 1817, "width_mm": 930, "sill_mm": 0, "head_mm": 2100,
+     "hinge": "start", "swing": "right", "source": "pdf_dimension", "note": "Цепочка 1817 + 930 + 1363"},
+    {"id": "D04", "type": "door", "wall": "W23", "offset_mm": 933.5, "width_mm": 930, "sill_mm": 0, "head_mm": 2100,
+     "hinge": "end", "swing": "right", "source": "pdf_dimension", "note": "Ванная: цепочка 190 + 930 + 1700"},
+    {"id": "D05", "type": "door", "wall": "W03", "offset_mm": 3418.5, "width_mm": 1650, "sill_mm": 0, "head_mm": 2400,
+     "leaves": 2, "swing": "left", "source": "pdf_dimension",
+     "note": "Балконная двустворчатая 1600 + по 25 мм импостов; высота — допущение, фрамуга над дверью считается стеной"},
+    {"id": "O01", "type": "window", "wall": "W03", "offset_mm": 217.5, "width_mm": 1236, "sill_mm": 0, "head_mm": 3039,
+     "source": "pdf_dimension", "note": "Секция витража 33 + 1178 + 25 (до оси импоста)"},
+    {"id": "O02", "type": "window", "wall": "W03", "offset_mm": 1453.5, "width_mm": 1965, "sill_mm": 0, "head_mm": 3039,
+     "source": "pdf_dimension", "note": "Секция витража 25 + 1915 + 25"},
+    {"id": "O03", "type": "window", "wall": "W03", "offset_mm": 5068.5, "width_mm": 1639, "sill_mm": 0, "head_mm": 3039,
+     "source": "pdf_dimension", "note": "Секция витража 25 + 1614; глухая вставка 355 справа — стена"},
+    {"id": "O04", "type": "window", "wall": "W03", "offset_mm": 7062.5, "width_mm": 1088, "sill_mm": 0, "head_mm": 3039,
+     "source": "pdf_dimension", "note": "Секция витража 1033 + 55"},
+    {"id": "O05", "type": "window", "wall": "W03", "offset_mm": 10300.5, "width_mm": 2176, "sill_mm": 0, "head_mm": 3039,
+     "source": "pdf_dimension", "note": "Окно зоны 3, размер 2176 (с рамой, один импост)"}
+  ],
+
+  "furniture": [
+    {"id": "F01", "type": "kitchen", "zone": "Z2", "center": [1680, 300], "size_mm": [3000, 600, 900], "rotation_deg": 180,
+     "note": "Кухонный ряд у нижней стены, рядом стояки (шахта x 3889–4712)"},
+    {"id": "F02", "type": "fridge", "zone": "Z2", "center": [3485, 325], "size_mm": [600, 650, 2000], "rotation_deg": 180},
+    {"id": "F03", "type": "table", "zone": "Z2", "center": [1900, 2100], "size_mm": [1400, 800, 750], "group": "dining"},
+    {"id": "F04", "type": "chair", "zone": "Z2", "center": [1550, 1525], "size_mm": [450, 450, 900], "rotation_deg": 180, "group": "dining"},
+    {"id": "F05", "type": "chair", "zone": "Z2", "center": [2250, 1525], "size_mm": [450, 450, 900], "rotation_deg": 180, "group": "dining"},
+    {"id": "F06", "type": "chair", "zone": "Z2", "center": [1550, 2675], "size_mm": [450, 450, 900], "group": "dining"},
+    {"id": "F07", "type": "chair", "zone": "Z2", "center": [2250, 2675], "size_mm": [450, 450, 900], "group": "dining"},
+    {"id": "F08", "type": "sofa", "zone": "Z2", "center": [3300, 4800], "size_mm": [2400, 950, 850], "rotation_deg": 270},
+    {"id": "F09", "type": "table", "zone": "Z2", "center": [1700, 4800], "size_mm": [1000, 600, 450], "rotation_deg": 90,
+     "note": "Журнальный стол"},
+    {"id": "F10", "type": "tv_stand", "zone": "Z2", "center": [225, 4800], "size_mm": [1600, 450, 500], "rotation_deg": 90},
+    {"id": "F11", "type": "wardrobe", "zone": "Z1", "center": [6464, 970], "size_mm": [600, 600, 2200], "rotation_deg": 90,
+     "note": "Шкаф в прихожей ниже двери санузла, вне зоны открывания входной двери"},
+    {"id": "F12", "type": "bed", "zone": "Z3", "center": [9538, 6100], "size_mm": [1800, 2100, 1000], "rotation_deg": 90,
+     "note": "Изголовье к стене W22"},
+    {"id": "F13", "type": "nightstand", "zone": "Z3", "center": [8688, 4950], "size_mm": [500, 400, 550], "rotation_deg": 90},
+    {"id": "F14", "type": "nightstand", "zone": "Z3", "center": [8688, 7250], "size_mm": [500, 400, 550], "rotation_deg": 90},
+    {"id": "F15", "type": "desk", "zone": "Z3", "center": [12009, 4800], "size_mm": [1200, 600, 750], "rotation_deg": 270, "group": "work"},
+    {"id": "F16", "type": "chair", "zone": "Z3", "center": [11450, 4800], "size_mm": [450, 450, 900], "rotation_deg": 90, "group": "work"},
+    {"id": "F17", "type": "wardrobe", "zone": "Z3", "center": [10911, 3173], "size_mm": [2796, 600, 2471], "rotation_deg": 180,
+     "note": "Встроенный шкаф с чертежа (существующий), до потолка H2471"},
+    {"id": "F18", "type": "toilet", "zone": "Z4", "center": [5137, 839], "size_mm": [380, 650, 800], "rotation_deg": 90},
+    {"id": "F19", "type": "sink", "zone": "Z4", "center": [4987, 2087], "size_mm": [500, 350, 850], "rotation_deg": 90},
+    {"id": "F20", "type": "bathtub", "zone": "Z5", "center": [10400, 2398], "size_mm": [1700, 750, 600]},
+    {"id": "F21", "type": "sink", "zone": "Z5", "center": [10100, 303], "size_mm": [1000, 500, 850], "rotation_deg": 180,
+     "note": "Тумба с раковиной"},
+    {"id": "F22", "type": "toilet", "zone": "Z5", "center": [11590, 1090], "size_mm": [380, 650, 800], "rotation_deg": 270,
+     "note": "У короба со стояками"}
+  ],
+
+  "controls": [
+    {"id": "C01", "description": "8103 — ширина зоны 2", "axis": "x", "expected_mm": 8103,
+     "from": {"wall": "W01", "side": "max"}, "to": {"wall": "W22", "side": "min"}},
+    {"id": "C02", "description": "7933 + 120 — верхняя цепочка от уступа левой стены", "axis": "x", "expected_mm": 8053,
+     "from": {"wall": "W02", "side": "max"}, "to": {"wall": "W22", "side": "min"}},
+    {"id": "C03", "description": "50 — уступ левой стены", "axis": "x", "expected_mm": 50,
+     "from": {"wall": "W01", "side": "max"}, "to": {"wall": "W02", "side": "max"}},
+    {"id": "C04", "description": "3789 — до шахты у кухни", "axis": "x", "expected_mm": 3789,
+     "from": {"wall": "W01", "side": "max"}, "to": {"wall": "W12", "side": "min"}},
+    {"id": "C05", "description": "255 — уступ шахты", "axis": "x", "expected_mm": 255,
+     "from": {"wall": "W12", "side": "min"}, "to": {"wall": "W14", "side": "min"}},
+    {"id": "C06", "description": "668 — ниша у санузла", "axis": "x", "expected_mm": 668,
+     "from": {"wall": "W14", "side": "min"}, "to": {"wall": "W16", "side": "min"}},
+    {"id": "C07", "description": "2120 — блок санузла по верхней перегородке", "axis": "x", "expected_mm": 2120,
+     "from": {"wall": "W14", "side": "min"}, "to": {"wall": "W18", "side": "max"}},
+    {"id": "C08", "description": "1237 — санузел по ширине", "axis": "x", "expected_mm": 1237,
+     "from": {"wall": "W16", "side": "max"}, "to": {"wall": "W18", "side": "min"}},
+    {"id": "C09", "description": "1939 — прихожая по ширине", "axis": "x", "expected_mm": 1939,
+     "from": {"wall": "W18", "side": "max"}, "to": {"wall": "W21", "side": "min"}},
+    {"id": "C10", "description": "250 — уступ стены W22", "axis": "x", "expected_mm": 250,
+     "from": {"wall": "W21", "side": "max"}, "to": {"wall": "W22", "side": "max"}},
+    {"id": "C11", "description": "1125 — коридор к ванной", "axis": "x", "expected_mm": 1125,
+     "from": {"wall": "W21", "side": "max"}, "to": {"wall": "W23", "side": "min"}},
+    {"id": "C12", "description": "1645 + 2176 — зона 3 по ширине", "axis": "x", "expected_mm": 3821,
+     "from": {"wall": "W22", "side": "max"}, "to": {"wall": "W04", "side": "min"}},
+    {"id": "C13", "description": "2437 — ванная по ширине", "axis": "x", "expected_mm": 2437,
+     "from": {"wall": "W23", "side": "max"}, "to": {"wall": "W26", "side": "min"}},
+    {"id": "C14", "description": "610 — шахта у кухни", "axis": "y", "expected_mm": 610,
+     "from": {"wall": "W06", "side": "max"}, "to": {"wall": "W13", "side": "max"}},
+    {"id": "C15", "description": "300 — уступ шахты", "axis": "y", "expected_mm": 300,
+     "from": {"wall": "W13", "side": "max"}, "to": {"wall": "W15", "side": "max"}},
+    {"id": "C16", "description": "1427 — ниша у санузла по высоте", "axis": "y", "expected_mm": 1427,
+     "from": {"wall": "W15", "side": "max"}, "to": {"wall": "W17", "side": "min"}},
+    {"id": "C17", "description": "1688 — санузел по глубине", "axis": "y", "expected_mm": 1688,
+     "from": {"wall": "W19", "side": "max"}, "to": {"wall": "W17", "side": "min"}},
+    {"id": "C18", "description": "1767 — прихожая до верха блока санузла", "axis": "y", "expected_mm": 1767,
+     "from": {"wall": "W08", "side": "max"}, "to": {"wall": "W17", "side": "max"}},
+    {"id": "C19", "description": "6890 — от прихожей до витража (по линии стены)", "axis": "y", "expected_mm": 6890,
+     "from": {"wall": "W08", "side": "max"}, "to": {"wall": "W03", "side": "min"}},
+    {"id": "C20", "description": "7590 — до внутренней линии рамы витража; в модели грань по линии стены 7560 (подпись 52,07 сходится только с ней)", "axis": "y", "expected_mm": 7590,
+     "from": {"wall": "W06", "side": "max"}, "to": {"wall": "W03", "side": "min"}},
+    {"id": "C21", "description": "2710 — ванная по глубине", "axis": "y", "expected_mm": 2710,
+     "from": {"wall": "W05", "side": "max"}, "to": {"wall": "W24", "side": "min"}},
+    {"id": "C22", "description": "280 — уступ пола ванной", "axis": "y", "expected_mm": 280,
+     "from": {"wall": "W05", "side": "max"}, "to": {"wall": "W29", "side": "max"}}
+  ],
+
+  "assumptions": [
+    {"text": "Источник — обмерный план (лист 02). Зоны, стены и проёмы размечены вручную по векторным линиям и заливкам PDF; там, где есть размер, использован он, остальное снято по масштабу 1:50 (точность разметки ≈ 1 мм на чертеже).", "source": "scaled"},
+    {"text": "Зоны названы нейтрально Z1–Z6 по номерам в кружках на плане. Экспликация (7 строк, 93,56 м²) не совпадает с планом ни нумерацией, ни составом помещений: в ней есть перегородки, которых нет на обмерном плане. Приоритет — геометрия чертежа; перегородки из экспликации не добавлены; однозначно сопоставлены только санузел (2,09), ванная (6,73) и балкон (9,50).", "source": "pdf_dimension"},
+    {"text": "Высоты потолка — отметки H на плане. Внутри зон 2 и 3 потолок разной высоты по линиям свеса ГКЛ (y = 3694 и y = 7360): H2471 / H2894 (H2891) / H3039. Площадь потолка дана по высотам, высота стены берётся по участку потолка над ней.", "source": "pdf_dimension"},
+    {"text": "Прихожая (Z1) без своей отметки — принята H2471 (зона ниже линии свеса ГКЛ). Балкон — H3039 (отметки нет).", "source": "assumption"},
+    {"text": "Высота стен в 3D — 3039 мм (наибольшая отметка, у витража).", "source": "assumption"},
+    {"text": "Верхняя наружная стена x 50–7983 — витраж. Принят витраж от пола до потолка (низ 0, верх 3039): секции между осями импостов считаются окнами O01–O04, глухая вставка 355 мм и простенок 7983–8103 — стеной. Окно зоны 3 (O05, 2176 мм) — так же.", "source": "assumption"},
+    {"text": "Высота дверей 2100 мм, балконной двери 2400 мм (фрамуга над ней учтена как стена — в запас). Высот проёмов на обмерном плане нет.", "source": "assumption"},
+    {"text": "Ширина проёмов дверей — по размерным цепочкам (проём в стене), а не по коробке; входная дверь 1090 мм — по разрыву стены (размера нет).", "source": "scaled"},
+    {"text": "Балкон: контур 5009 × 1900 по размерам. Остекление балкона не моделируется стенами; отделка балкона — только грань наружной стены W03.", "source": "pdf_dimension"},
+    {"text": "Шахты и короба (у кухни, под санузлом, в коридоре у ванной, в ванной) в зоны не входят; ревизионный люк в коробе ванной не вычитается из стены.", "source": "scaled"},
+    {"text": "Мебель — условные блоки для проверки расстановки и проходов; встроенный шкаф F17 взят с чертежа.", "source": "assumption"}
+  ]
+}

@@ -1,0 +1,917 @@
+{
+  "project": "Квартира — обмерный план (projectfortest.pdf, лист 02)",
+  "zones": [
+    {
+      "id": "Z1",
+      "name": "Прихожая",
+      "kind": "interior",
+      "floor_m2": 3.4,
+      "perimeter_m": 7.41,
+      "ceiling_m2": 3.4,
+      "ceiling_height_m": 2.47,
+      "ceiling_by_height": [
+        {
+          "height_m": 2.471,
+          "area_m2": 3.4,
+          "label": "основная"
+        }
+      ],
+      "walls_gross_m2": 14.14,
+      "openings_m2": 4.05,
+      "walls_net_m2": 10.09,
+      "faces": [
+        {
+          "key": "Z1/e0/W08",
+          "length_m": 1.85,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": false,
+          "gross_m2": 4.58,
+          "openings_m2": 2.29,
+          "net_m2": 2.29,
+          "openings": [
+            "D01"
+          ]
+        },
+        {
+          "key": "Z1/e0/W07",
+          "length_m": 0.09,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": true,
+          "gross_m2": 0.21,
+          "openings_m2": 0.0,
+          "net_m2": 0.21,
+          "openings": []
+        },
+        {
+          "key": "Z1/e1/W21",
+          "length_m": 1.67,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": false,
+          "gross_m2": 4.13,
+          "openings_m2": 0.0,
+          "net_m2": 4.13,
+          "openings": []
+        },
+        {
+          "key": "Z1/e2/W20",
+          "length_m": 0.25,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": false,
+          "gross_m2": 0.62,
+          "openings_m2": 0.0,
+          "net_m2": 0.62,
+          "openings": []
+        },
+        {
+          "key": "Z1/e3/W20",
+          "length_m": 0.1,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": true,
+          "gross_m2": 0.23,
+          "openings_m2": 0.0,
+          "net_m2": 0.23,
+          "openings": []
+        },
+        {
+          "key": "Z1/e5/W18",
+          "length_m": 1.67,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": false,
+          "gross_m2": 4.12,
+          "openings_m2": 1.76,
+          "net_m2": 2.36,
+          "openings": [
+            "D02"
+          ]
+        },
+        {
+          "key": "Z1/e5/W17",
+          "length_m": 0.1,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": true,
+          "gross_m2": 0.25,
+          "openings_m2": 0.0,
+          "net_m2": 0.25,
+          "openings": []
+        }
+      ]
+    },
+    {
+      "id": "Z2",
+      "name": "Общая зона (кухня-гостиная)",
+      "kind": "interior",
+      "floor_m2": 52.07,
+      "perimeter_m": 32.66,
+      "ceiling_m2": 52.07,
+      "ceiling_height_m": 2.89,
+      "ceiling_by_height": [
+        {
+          "height_m": 2.471,
+          "area_m2": 20.84,
+          "label": "H2471 — ниже линии свеса ГКЛ y = 3694"
+        },
+        {
+          "height_m": 2.894,
+          "area_m2": 29.62,
+          "label": "основная"
+        },
+        {
+          "height_m": 3.039,
+          "area_m2": 1.61,
+          "label": "H3039 — у витража, выше линии свеса ГКЛ y = 7360"
+        }
+      ],
+      "walls_gross_m2": 84.46,
+      "openings_m2": 24.14,
+      "walls_net_m2": 60.32,
+      "faces": [
+        {
+          "key": "Z2/e0/W06",
+          "length_m": 3.79,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": false,
+          "gross_m2": 9.36,
+          "openings_m2": 0.0,
+          "net_m2": 9.36,
+          "openings": []
+        },
+        {
+          "key": "Z2/e1/W12",
+          "length_m": 0.61,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": false,
+          "gross_m2": 1.51,
+          "openings_m2": 0.0,
+          "net_m2": 1.51,
+          "openings": []
+        },
+        {
+          "key": "Z2/e2/W13",
+          "length_m": 0.15,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": false,
+          "gross_m2": 0.38,
+          "openings_m2": 0.0,
+          "net_m2": 0.38,
+          "openings": []
+        },
+        {
+          "key": "Z2/e2/W12",
+          "length_m": 0.1,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": true,
+          "gross_m2": 0.25,
+          "openings_m2": 0.0,
+          "net_m2": 0.25,
+          "openings": []
+        },
+        {
+          "key": "Z2/e3/W14",
+          "length_m": 0.3,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": false,
+          "gross_m2": 0.74,
+          "openings_m2": 0.0,
+          "net_m2": 0.74,
+          "openings": []
+        },
+        {
+          "key": "Z2/e4/W15",
+          "length_m": 0.57,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": false,
+          "gross_m2": 1.4,
+          "openings_m2": 0.0,
+          "net_m2": 1.4,
+          "openings": []
+        },
+        {
+          "key": "Z2/e4/W14",
+          "length_m": 0.1,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": true,
+          "gross_m2": 0.25,
+          "openings_m2": 0.0,
+          "net_m2": 0.25,
+          "openings": []
+        },
+        {
+          "key": "Z2/e5/W16",
+          "length_m": 1.43,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": false,
+          "gross_m2": 3.53,
+          "openings_m2": 0.0,
+          "net_m2": 3.53,
+          "openings": []
+        },
+        {
+          "key": "Z2/e6/W17",
+          "length_m": 0.67,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": false,
+          "gross_m2": 1.65,
+          "openings_m2": 0.0,
+          "net_m2": 1.65,
+          "openings": []
+        },
+        {
+          "key": "Z2/e7/W17",
+          "length_m": 0.1,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": true,
+          "gross_m2": 0.25,
+          "openings_m2": 0.0,
+          "net_m2": 0.25,
+          "openings": []
+        },
+        {
+          "key": "Z2/e8/W17",
+          "length_m": 2.12,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": false,
+          "gross_m2": 5.24,
+          "openings_m2": 0.0,
+          "net_m2": 5.24,
+          "openings": []
+        },
+        {
+          "key": "Z2/e9/W20",
+          "length_m": 0.25,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": false,
+          "gross_m2": 0.62,
+          "openings_m2": 0.0,
+          "net_m2": 0.62,
+          "openings": []
+        },
+        {
+          "key": "Z2/e10/W21",
+          "length_m": 2.34,
+          "height_m": 2.67,
+          "heights_m": [
+            2.471,
+            2.894
+          ],
+          "end_face": false,
+          "gross_m2": 6.25,
+          "openings_m2": 2.16,
+          "net_m2": 4.09,
+          "openings": [
+            "D03"
+          ]
+        },
+        {
+          "key": "Z2/e10/W22",
+          "length_m": 2.78,
+          "height_m": 2.9,
+          "heights_m": [
+            2.894,
+            3.039
+          ],
+          "end_face": false,
+          "gross_m2": 8.07,
+          "openings_m2": 0.0,
+          "net_m2": 8.07,
+          "openings": []
+        },
+        {
+          "key": "Z2/e11/W03",
+          "length_m": 8.05,
+          "height_m": 3.04,
+          "heights_m": [
+            3.039
+          ],
+          "end_face": false,
+          "gross_m2": 24.47,
+          "openings_m2": 21.98,
+          "net_m2": 2.5,
+          "openings": [
+            "O01",
+            "O02",
+            "D05",
+            "O03",
+            "O04"
+          ]
+        },
+        {
+          "key": "Z2/e12/W02",
+          "length_m": 1.93,
+          "height_m": 2.91,
+          "heights_m": [
+            2.894,
+            3.039
+          ],
+          "end_face": false,
+          "gross_m2": 5.61,
+          "openings_m2": 0.0,
+          "net_m2": 5.61,
+          "openings": []
+        },
+        {
+          "key": "Z2/e13/W02",
+          "length_m": 0.05,
+          "height_m": 2.89,
+          "heights_m": [
+            2.894
+          ],
+          "end_face": true,
+          "gross_m2": 0.14,
+          "openings_m2": 0.0,
+          "net_m2": 0.14,
+          "openings": []
+        },
+        {
+          "key": "Z2/e14/W01",
+          "length_m": 5.63,
+          "height_m": 2.62,
+          "heights_m": [
+            2.471,
+            2.894
+          ],
+          "end_face": false,
+          "gross_m2": 14.74,
+          "openings_m2": 0.0,
+          "net_m2": 14.74,
+          "openings": []
+        }
+      ]
+    },
+    {
+      "id": "Z3",
+      "name": "Комната со встроенным шкафом",
+      "kind": "interior",
+      "floor_m2": 20.77,
+      "perimeter_m": 23.16,
+      "ceiling_m2": 20.77,
+      "ceiling_height_m": 2.89,
+      "ceiling_by_height": [
+        {
+          "height_m": 2.471,
+          "area_m2": 5.73,
+          "label": "H2471 — коридор и шкаф, ниже линии свеса ГКЛ y = 3694"
+        },
+        {
+          "height_m": 2.891,
+          "area_m2": 14.28,
+          "label": "основная"
+        },
+        {
+          "height_m": 3.039,
+          "area_m2": 0.76,
+          "label": "H3039 — у окна, выше линии свеса ГКЛ y = 7360"
+        }
+      ],
+      "walls_gross_m2": 62.8,
+      "openings_m2": 10.73,
+      "walls_net_m2": 52.07,
+      "faces": [
+        {
+          "key": "Z3/e0/W11",
+          "length_m": 1.02,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": false,
+          "gross_m2": 2.52,
+          "openings_m2": 0.0,
+          "net_m2": 2.52,
+          "openings": []
+        },
+        {
+          "key": "Z3/e0/W09",
+          "length_m": 0.1,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": true,
+          "gross_m2": 0.26,
+          "openings_m2": 0.0,
+          "net_m2": 0.26,
+          "openings": []
+        },
+        {
+          "key": "Z3/e1/W23",
+          "length_m": 2.2,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": false,
+          "gross_m2": 5.44,
+          "openings_m2": 1.95,
+          "net_m2": 3.49,
+          "openings": [
+            "D04"
+          ]
+        },
+        {
+          "key": "Z3/e1/W25",
+          "length_m": 0.62,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": false,
+          "gross_m2": 1.52,
+          "openings_m2": 0.0,
+          "net_m2": 1.52,
+          "openings": []
+        },
+        {
+          "key": "Z3/e2/W25",
+          "length_m": 0.15,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": true,
+          "gross_m2": 0.37,
+          "openings_m2": 0.0,
+          "net_m2": 0.37,
+          "openings": []
+        },
+        {
+          "key": "Z3/e3/W25",
+          "length_m": 0.62,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": false,
+          "gross_m2": 1.52,
+          "openings_m2": 0.0,
+          "net_m2": 1.52,
+          "openings": []
+        },
+        {
+          "key": "Z3/e4/W24",
+          "length_m": 2.8,
+          "height_m": 2.47,
+          "heights_m": [
+            2.471
+          ],
+          "end_face": false,
+          "gross_m2": 6.91,
+          "openings_m2": 0.0,
+          "net_m2": 6.91,
+          "openings": []
+        },
+        {
+          "key": "Z3/e5/W04",
+          "length_m": 4.69,
+          "height_m": 2.82,
+          "heights_m": [
+            2.471,
+            2.891,
+            3.039
+          ],
+          "end_face": false,
+          "gross_m2": 13.23,
+          "openings_m2": 0.0,
+          "net_m2": 13.23,
+          "openings": []
+        },
+        {
+          "key": "Z3/e6/W03",
+          "length_m": 3.82,
+          "height_m": 3.04,
+          "heights_m": [
+            3.039
+          ],
+          "end_face": false,
+          "gross_m2": 11.61,
+          "openings_m2": 6.61,
+          "net_m2": 5.0,
+          "openings": [
+            "O05"
+          ]
+        },
+        {
+          "key": "Z3/e7/W22",
+          "length_m": 2.78,
+          "height_m": 2.9,
+          "heights_m": [
+            2.891,
+            3.039
+          ],
+          "end_face": false,
+          "gross_m2": 8.07,
+          "openings_m2": 0.0,
+          "net_m2": 8.07,
+          "openings": []
+        },
+        {
+          "key": "Z3/e8/W22",
+          "length_m": 0.25,
+          "height_m": 2.89,
+          "heights_m": [
+            2.891
+          ],
+          "end_face": true,
+          "gross_m2": 0.72,
+          "openings_m2": 0.0,
+          "net_m2": 0.72,
+          "openings": []
+        },
+        {
+          "key": "Z3/e9/W21",
+          "length_m": 4.11,
+          "height_m": 2.58,
+          "heights_m": [
+            2.471,
+            2.891
+          ],
+          "end_face": false,
+          "gross_m2": 10.61,
+          "openings_m2": 2.16,
+          "net_m2": 8.45,
+          "openings": [
+            "D03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Z4",
+      "name": "Санузел",
+      "kind": "interior",
+      "floor_m2": 2.09,
+      "perimeter_m": 5.85,
+      "ceiling_m2": 2.09,
+      "ceiling_height_m": 2.38,
+      "ceiling_by_height": [
+        {
+          "height_m": 2.376,
+          "area_m2": 2.09,
+          "label": "основная"
+        }
+      ],
+      "walls_gross_m2": 13.9,
+      "openings_m2": 1.76,
+      "walls_net_m2": 12.14,
+      "faces": [
+        {
+          "key": "Z4/e0/W19",
+          "length_m": 1.24,
+          "height_m": 2.38,
+          "heights_m": [
+            2.376
+          ],
+          "end_face": false,
+          "gross_m2": 2.94,
+          "openings_m2": 0.0,
+          "net_m2": 2.94,
+          "openings": []
+        },
+        {
+          "key": "Z4/e1/W07",
+          "length_m": 0.02,
+          "height_m": 2.38,
+          "heights_m": [
+            2.376
+          ],
+          "end_face": false,
+          "gross_m2": 0.05,
+          "openings_m2": 0.0,
+          "net_m2": 0.05,
+          "openings": []
+        },
+        {
+          "key": "Z4/e1/W18",
+          "length_m": 1.67,
+          "height_m": 2.38,
+          "heights_m": [
+            2.376
+          ],
+          "end_face": false,
+          "gross_m2": 3.96,
+          "openings_m2": 1.76,
+          "net_m2": 2.2,
+          "openings": [
+            "D02"
+          ]
+        },
+        {
+          "key": "Z4/e2/W17",
+          "length_m": 1.24,
+          "height_m": 2.38,
+          "heights_m": [
+            2.376
+          ],
+          "end_face": false,
+          "gross_m2": 2.94,
+          "openings_m2": 0.0,
+          "net_m2": 2.94,
+          "openings": []
+        },
+        {
+          "key": "Z4/e3/W16",
+          "length_m": 1.69,
+          "height_m": 2.38,
+          "heights_m": [
+            2.376
+          ],
+          "end_face": false,
+          "gross_m2": 4.01,
+          "openings_m2": 0.0,
+          "net_m2": 4.01,
+          "openings": []
+        }
+      ]
+    },
+    {
+      "id": "Z5",
+      "name": "Ванная",
+      "kind": "interior",
+      "floor_m2": 6.67,
+      "perimeter_m": 11.49,
+      "ceiling_m2": 6.67,
+      "ceiling_height_m": 2.4,
+      "ceiling_by_height": [
+        {
+          "height_m": 2.397,
+          "area_m2": 6.67,
+          "label": "основная"
+        }
+      ],
+      "walls_gross_m2": 27.55,
+      "openings_m2": 1.95,
+      "walls_net_m2": 25.59,
+      "faces": [
+        {
+          "key": "Z5/e0/W05",
+          "length_m": 1.53,
+          "height_m": 2.4,
+          "heights_m": [
+            2.397
+          ],
+          "end_face": false,
+          "gross_m2": 3.66,
+          "openings_m2": 0.0,
+          "net_m2": 3.66,
+          "openings": []
+        },
+        {
+          "key": "Z5/e1/W28",
+          "length_m": 0.29,
+          "height_m": 2.4,
+          "heights_m": [
+            2.397
+          ],
+          "end_face": false,
+          "gross_m2": 0.7,
+          "openings_m2": 0.0,
+          "net_m2": 0.7,
+          "openings": []
+        },
+        {
+          "key": "Z5/e2/W29",
+          "length_m": 0.79,
+          "height_m": 2.4,
+          "heights_m": [
+            2.397
+          ],
+          "end_face": false,
+          "gross_m2": 1.88,
+          "openings_m2": 0.0,
+          "net_m2": 1.88,
+          "openings": []
+        },
+        {
+          "key": "Z5/e2/W28",
+          "length_m": 0.12,
+          "height_m": 2.4,
+          "heights_m": [
+            2.397
+          ],
+          "end_face": true,
+          "gross_m2": 0.3,
+          "openings_m2": 0.0,
+          "net_m2": 0.3,
+          "openings": []
+        },
+        {
+          "key": "Z5/e3/W26",
+          "length_m": 1.57,
+          "height_m": 2.4,
+          "heights_m": [
+            2.397
+          ],
+          "end_face": false,
+          "gross_m2": 3.76,
+          "openings_m2": 0.0,
+          "net_m2": 3.76,
+          "openings": []
+        },
+        {
+          "key": "Z5/e4/W26",
+          "length_m": 0.1,
+          "height_m": 2.4,
+          "heights_m": [
+            2.397
+          ],
+          "end_face": true,
+          "gross_m2": 0.24,
+          "openings_m2": 0.0,
+          "net_m2": 0.24,
+          "openings": []
+        },
+        {
+          "key": "Z5/e5/W26",
+          "length_m": 0.3,
+          "height_m": 2.4,
+          "heights_m": [
+            2.397
+          ],
+          "end_face": false,
+          "gross_m2": 0.73,
+          "openings_m2": 0.0,
+          "net_m2": 0.73,
+          "openings": []
+        },
+        {
+          "key": "Z5/e6/W30",
+          "length_m": 0.18,
+          "height_m": 2.4,
+          "heights_m": [
+            2.397
+          ],
+          "end_face": false,
+          "gross_m2": 0.44,
+          "openings_m2": 0.0,
+          "net_m2": 0.44,
+          "openings": []
+        },
+        {
+          "key": "Z5/e7/W31",
+          "length_m": 1.17,
+          "height_m": 2.4,
+          "heights_m": [
+            2.397
+          ],
+          "end_face": false,
+          "gross_m2": 2.79,
+          "openings_m2": 0.0,
+          "net_m2": 2.79,
+          "openings": []
+        },
+        {
+          "key": "Z5/e8/W24",
+          "length_m": 2.72,
+          "height_m": 2.4,
+          "heights_m": [
+            2.397
+          ],
+          "end_face": false,
+          "gross_m2": 6.52,
+          "openings_m2": 0.0,
+          "net_m2": 6.52,
+          "openings": []
+        },
+        {
+          "key": "Z5/e9/W23",
+          "length_m": 2.72,
+          "height_m": 2.4,
+          "heights_m": [
+            2.397
+          ],
+          "end_face": false,
+          "gross_m2": 6.52,
+          "openings_m2": 1.95,
+          "net_m2": 4.57,
+          "openings": [
+            "D04"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Z6",
+      "name": "Балкон",
+      "kind": "balcony",
+      "floor_m2": 9.52,
+      "perimeter_m": 13.82,
+      "ceiling_m2": 9.52,
+      "ceiling_height_m": 3.04,
+      "ceiling_by_height": [
+        {
+          "height_m": 3.039,
+          "area_m2": 9.52,
+          "label": "основная"
+        }
+      ],
+      "walls_gross_m2": 15.22,
+      "openings_m2": 13.74,
+      "walls_net_m2": 1.48,
+      "faces": [
+        {
+          "key": "Z6/e0/W03",
+          "length_m": 5.01,
+          "height_m": 3.04,
+          "heights_m": [
+            3.039
+          ],
+          "end_face": false,
+          "gross_m2": 15.22,
+          "openings_m2": 13.74,
+          "net_m2": 1.48,
+          "openings": [
+            "O02",
+            "D05",
+            "O03"
+          ]
+        }
+      ]
+    }
+  ],
+  "interior_total": {
+    "floor_m2": 85.0,
+    "ceiling_m2": 85.0,
+    "walls_gross_m2": 202.85,
+    "openings_m2": 42.64,
+    "walls_net_m2": 160.21
+  },
+  "balcony_total": {
+    "floor_m2": 9.52,
+    "walls_net_m2": 1.48
+  },
+  "counts": {
+    "doors": 5,
+    "windows": 5,
+    "doorways": 0
+  },
+  "door_ids": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05"
+  ],
+  "window_ids": [
+    "O01",
+    "O02",
+    "O03",
+    "O04",
+    "O05"
+  ]
+}

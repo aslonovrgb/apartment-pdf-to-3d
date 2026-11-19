@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Квартира: PDF → 3D → ведомость</title>
+<style>
+  :root { --bg: #f6f5f2; --ink: #1f2328; --muted: #5b5f66; --line: #d9d7d2; --card: #ffffff; --accent: #c2410c; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16181b; --ink: #ecedef; --muted: #a2a6ad; --line: #2c3036; --card: #1e2125; --accent: #f08a4b; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+  main { max-width: 1040px; margin: 0 auto; padding: 32px 16px 48px; }
+  h1 { font-size: 28px; line-height: 1.25; margin: 0 0 6px; }
+  .sub { color: var(--muted); margin: 0 0 22px; }
+  video { width: 100%; border-radius: 10px; background: #000; display: block; }
+  .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin: 20px 0 8px; }
+  .links a { display: block; padding: 12px 14px; background: var(--card); border: 1px solid var(--line);
+             border-radius: 8px; color: var(--ink); text-decoration: none; }
+  .links a:hover { border-color: var(--accent); }
+  .links small { display: block; color: var(--muted); }
+  p.note { color: var(--muted); font-size: 14px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Квартира: PDF → 3D-модель → ведомость объёмов</h1>
+  <p class="sub">Демо 81 с: PDF → совпадение геометрии → изменение двери на 100 мм → Excel.</p>
+  <video controls preload="metadata" poster="out/iso.png" src="video/apartment_demo.mp4"></video>
+  <div class="links">
+    <a href="https://github.com/aslonovrgb/apartment-pdf-to-3d">Репозиторий и README<small>подход, запуск, результаты сверки</small></a>
+    <a href="out/apartment.xlsx">apartment.xlsx<small>ведомость объёмов (сгенерирована)</small></a>
+    <a href="out/apartment.blend">apartment.blend<small>сцена Blender</small></a>
+    <a href="out/overlay.pdf">overlay.pdf<small>разметка поверх исходного PDF</small></a>
+    <a href="https://github.com/aslonovrgb/apartment-pdf-to-3d/releases/latest">Архив целиком<small>код, plan.json, результаты</small></a>
+    <a href="video/apartment_demo.mp4" download>Скачать видео<small>MP4, 1080p</small></a>
+  </div>
+  <p class="note">Озвучка синтезирована (голос macOS). Все кадры собраны скриптом video/build_video.py из результатов сборки.</p>
+</main>
+</body>
+</html>

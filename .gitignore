@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.pytest_cache/
+out.tmp/
+out_check*/
+out_variant.tmp/
+out_base_for_demo*/
+work/
+*.blend1
+.DS_Store
+video/build/
+video/apartment_demo_no_voice.mp4
+dist/
+SUBMIT.md
+docs/video_script.md

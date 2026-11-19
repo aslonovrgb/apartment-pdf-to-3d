@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "project": {"name": "Две комнаты с дверью в перегородке"},
+  "source": {
+    "file": "missing.pdf",
+    "page": 1,
+    "units": "mm",
+    "scale": {"pt_per_m": 56.693},
+    "origin": {"pdf_pt": [0, 0]}
+  },
+  "defaults": {"ceiling_height_mm": 2700, "ceiling_height_source": "assumption", "wall_height_mm": 2700},
+  "zones": [
+    {"id": "A", "name": "Комната A", "kind": "interior", "source": "assumption",
+     "polygon": [[0, 0], [3000, 0], [3000, 3000], [0, 3000]]},
+    {"id": "B", "name": "Комната B", "kind": "interior", "source": "assumption",
+     "polygon": [[3100, 0], [6100, 0], [6100, 3000], [3100, 3000]]}
+  ],
+  "walls": [
+    {"id": "W1", "start": [-100, -100], "end": [6200, -100], "thickness_mm": 200, "kind": "exterior", "source": "assumption"},
+    {"id": "W2", "start": [6200, -100], "end": [6200, 3100], "thickness_mm": 200, "kind": "exterior", "source": "assumption"},
+    {"id": "W3", "start": [6200, 3100], "end": [-100, 3100], "thickness_mm": 200, "kind": "exterior", "source": "assumption"},
+    {"id": "W4", "start": [-100, 3100], "end": [-100, -100], "thickness_mm": 200, "kind": "exterior", "source": "assumption"},
+    {"id": "W5", "start": [3050, -100], "end": [3050, 3100], "thickness_mm": 100, "kind": "partition", "source": "assumption"}
+  ],
+  "openings": [
+    {"id": "D1", "type": "door", "wall": "W5", "offset_mm": 1100, "width_mm": 800, "sill_mm": 0, "head_mm": 2100,
+     "hinge": "start", "swing": "right", "source": "assumption"},
+    {"id": "O1", "type": "window", "wall": "W1", "offset_mm": 1000, "width_mm": 1200, "sill_mm": 900, "head_mm": 2400,
+     "source": "assumption"}
+  ],
+  "furniture": [
+    {"id": "F1", "type": "bed", "zone": "B", "center": [5100, 2000], "size_mm": [1600, 2000, 450], "rotation_deg": 0}
+  ]
+}
